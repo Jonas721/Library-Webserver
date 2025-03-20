@@ -1,0 +1,42 @@
+<form method="post" action="maintain.html" >
+  <P style="color:{{msgColor}};">{{msg}}</P>
+  <table cellSpacing="5" cellPadding="5" align="left" border="1">
+    <tr>
+      <td vAlign="top" align="right" width="150">Title:</td>
+      <td><textarea name="title">{{book.title}}</textarea>&nbsp;</td>
+    </tr>
+    <tr>
+      <td vAlign="top" align="right">Call Number:</td>
+      <td><input name="callNo" type="text" value="{{book.callNo}}"/></td>
+    </tr>
+    <tr>
+      <td vAlign="top" align="right">Author:</td>
+      <td><input name="author" type="text"  value="{{book.author}}"/></td>
+    </tr>
+    <tr>
+      <td vAlign="top" align="right">Publication Info:</td>
+      <td><input name="pubInfo" type="text"  value="{{book.pubInfo}}"/></td>
+    </tr>
+    <tr>
+      <td vAlign="top" align="right">Description:</td>
+      <td><input name="descript" type="text"  value="{{book.descript}}"/></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Series:</td>
+      <td><input name="series" type="text"  value="{{book.series}}"/></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">Additional Author:</td>
+      <td><input name="addAuthor" type="text"  value="{{book.addAuthor}}"/></td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">
+
+      </td>
+      <td>
+        <input type="submit" name="submit" value="Submit"/>
+        <input type="hidden" name="bookID" value="{{bookID}}"/>
+      </td>
+    </tr>
+  </table>
+</form>

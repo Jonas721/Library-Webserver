@@ -1,0 +1,21 @@
+
+<div class="container">
+    <header>
+      <a href="mobilesearch.html" class="search-button">Search</a>
+      <div class="header-title">Search Results</div>
+      <!-- An empty element to balance the flex spacing -->
+      <div style="width: 60px;"></div>
+    </header>
+    <ul>
+      {{#each items}}
+      <li>
+        <a href='mobiledetail.html?book_id={{this.id}}' class="item-link">{{this.author}} - {{this.title}}</a>
+        {{!-- <td align="Left" valign="Top">{{this.author}}</td><td align="Left" valign="Top"><a href='details.html?book_id={{this.id}}' alt=''>{{this.title}}</a></td> --}}
+      </li>
+      {{/each}}
+    </ul>
+    <div class="footer">
+      <a href="mobileindex.html?start={{lastPage}}" class="nav-button">Previous</a>
+      <a href="mobileindex.html?start={{nextPage}}" class="nav-button">Next</a>
+    </div>
+</div>

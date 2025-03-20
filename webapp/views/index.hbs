@@ -1,0 +1,28 @@
+<form method="get" action="search.html" >
+
+  <P>Search by Title:
+    <input name="txtTitle" type="text" value="{{lastSearchTerm}}"  />&nbsp;<input type="submit" name="btnSearch" value="Search" />&nbsp;
+  </P>
+<p style="color:red;">{{errorMsg.msg}}</p>
+
+  <P><a href="search.html?start={{lastPage}}">&lt;&lt;&nbsp;Prev</a> Page {{nextPage}} of {{totalPages}} ({{numResults}} matches) <a href="search.html?start={{nextPage}}">Next&nbsp;&gt;&gt;</a></P>
+
+  <P><table id="tblResults" cellspacing="0" cellpadding="5" align="Left" bordercolor="Gray" border="0">
+<tr>
+<td align="Left" valign="Top" width="25%"><b>Author</b></td><td align="Left" valign="Top" width="75%"><b>Title</b></td>
+</tr>
+{{#each items}}
+<tr>
+  <td align="Left" valign="Top">{{this.author}}</td><td align="Left" valign="Top"><a href='details.html?book_id={{this.id}}' alt=''>{{this.title}}</a></td>
+</tr>
+{{/each}}
+
+</table>
+  <br>
+  <br>
+  <P>&nbsp;</P>
+  <P>&nbsp;</P>
+
+  <P>&nbsp;</P>
+  <P>&nbsp;</P>
+</form>
